@@ -19,7 +19,7 @@ if __name__ == '__main__':
         # Read the test description from the file name
         difficulty, pins, target = [k.split('-')[1] for k in test_name.split('_')][:3]
         target = int(target)
-        
+
         # Make the pin reader return the test
         def set_pins() -> Tuple[Points, int]: return test_pins, target
 

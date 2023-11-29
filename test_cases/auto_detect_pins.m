@@ -1,4 +1,4 @@
-% Define the replacement mappings
+    % Define the replacement mappings
 replaceMap = {'SL', 'SS', 'ES', 'L', 'M', 'S'};
 replaceWithMap = {'sehrleicht', 'sehrschwer', 'extremschwer', 'leicht', 'mittel', 'schwer'};
 keys = {'schwierigkeit', 'pins', 'kanten'};
