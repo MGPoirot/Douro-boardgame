@@ -1,12 +1,18 @@
 # Douro-boardgame
-Implementatio of a boardgame I call 道路を築け, somewhat similar to 橋をかけろ
+Implementation of a boardgame I call Douro (道路を築け, *Douro o kizuke*; lit. "build roads!" somewhat similar to existing game of Hashiwokakero (橋をかけろ *Hashi o kakero*; lit. "build bridges!").
+
+The objective is not to play the game, but to write a function that successfully completes the 29 test scenarios given a fixed amount of path elements.
 
 ## Objective
 Given is a `board` of 10 by 10 square tiles. The corners of these tiles may contain `pins`. The board contains 5 to 12 of these pins. The main objective of the game is to connect these pins. You connect this tile with `path elements`. These path elements can be placed on the edge between two tiles, so they always have a length of one. When all pins are connected the goal is to use as few path elements as possible.
 
+![demo](demo.jpg)
+
 ## Tips
+
 * This problem (finding the shortest route to reach all points) is called a Traveling Salesman Problem. However, there are two differences: You do not have to return to where you started, and "walking back" over a `path` is not double counted.
 * This way of calculating distance over a grid is called "Manhattan Distance" or the L1 distance.
+* The difference with Hashi is that roads are allowed to cross and are of fixed length.
 
 ## Code definitions
 * `board`: `points` on the board consist of an x and y component. Since the matrix consists of 10 tiles in both directions, the minimum of the x and y components is 0, and the maximum is 11. Points may not contain decimals.
