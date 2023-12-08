@@ -1,7 +1,9 @@
 # Douro-boardgame
-Implementation of a boardgame I call Douro (道路を築け, *Douro o kizuke*; lit. "build roads!" somewhat similar to existing game of Hashiwokakero (橋をかけろ *Hashi o kakero*; lit. "build bridges!").
+Implementation of a boardgame I *-by lack of an official name-* dub "Douro" (道路を築け, *Douro o kizuke*; literally "build roads!", similar to existing game of Hashiwokakero (橋をかけろ *Hashi o kakero*; lit. "build bridges!").
 
-The objective is not to play the game, but to write a function that successfully completes the 29 test scenarios given a fixed amount of path elements.
+In computer science, this game of finding the minimum spanning tree is known as the rectilinear steiner tree problem. It is used in the real world in chip design. Fun fact: this is an NP-Hard problem! So, there is no algorithm known which solves every (large) instance quickly.
+
+In this implementation, the objective is not to play the game, but to write a function that successfully completes the 29 test scenarios given a fixed amount of path elements.
 
 ## Objective
 Given is a `board` of 10 by 10 square tiles. The corners of these tiles may contain `pins`. The board contains 5 to 12 of these pins. The main objective of the game is to connect these pins. You connect this tile with `path elements`. These path elements can be placed on the edge between two tiles, so they always have a length of one. When all pins are connected the goal is to use as few path elements as possible.
