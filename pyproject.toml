@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "douro-boardgame"
+version = "0.1.0"
+description = "fun with magnus!"
+authors = ["thesethtruth <seth.van.wieringen@witteveenbos.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "douro_boardgame"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.0.0"
+matplotlib = "^3.6.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11"
+ipykernel = "^6.27.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
