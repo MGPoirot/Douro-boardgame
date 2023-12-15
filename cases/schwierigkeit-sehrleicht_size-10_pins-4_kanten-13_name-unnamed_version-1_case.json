@@ -1,0 +1,26 @@
+{
+    "id": 20,
+    "kanten": 13,
+    "name": "unnamed",
+    "pins": [
+        [
+            0,
+            1
+        ],
+        [
+            4,
+            4
+        ],
+        [
+            8,
+            3
+        ],
+        [
+            2,
+            5
+        ]
+    ],
+    "schwierigkeit": "sehrleicht",
+    "size": 10,
+    "version": 1
+}
