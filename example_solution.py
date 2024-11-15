@@ -64,14 +64,12 @@ def find_paths(pins: Points, target: int = None) -> Tuple[Paths, int]:
     """
     total_flops = 1
     for max_evals, rng in (
-            (50, 0),
-            (200, 1),
-            (500, 2),
-            (1000, 3),
-            (10_000, 4),
-            (100_000, 5),
-            (1000_000, 6),
-            (10_000_000, 7),
+            (10_000_000, 3),
+            (10_000_000, 4),
+            # (10_000, 4),
+            # (100_000, 5),
+            # (1000_000, 6),
+            # (10_000_000, 7),
     ):
         paths, flops = run_search(pins, target, max_evals=max_evals, rng=rng)
         total_flops += flops

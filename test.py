@@ -5,8 +5,8 @@ import argparse
 import importlib
 
 
-def gen_result(solution_name: str) -> pd.DataFrame:
-    solution_module = importlib.import_module(solution_name)
+def gen_result(_solution_name: str) -> pd.DataFrame:
+    solution_module = importlib.import_module(_solution_name)
     target = solutions_root / solution_module.__name__ / 'test.csv'
     path_finder = getattr(solution_module, 'find_paths')
 
@@ -20,11 +20,11 @@ def gen_result(solution_name: str) -> pd.DataFrame:
     score.to_csv(get_unique_filename(target))
     return score
 
-solution_name='example_solution'
-while True:
-    gen_result(solution_name)
 
 if __name__ == '__main__':
+    solution_name = 'example_solution'
+    while True:
+        gen_result(solution_name)
     parser = argparse.ArgumentParser(description="Run the path finding solution.")
     parser.add_argument("solution", nargs="?", default="your_solution",
                         help="Module name where find_paths function is located. Default is 'your_solution'.")
@@ -37,6 +37,3 @@ if __name__ == '__main__':
           f'- {int(score.is_successful.sum())}/{len(score)} successes\n'
           f'- {score.kanten.sum() - score.paths_used.sum()} paths\n'
           f'- {format_time(score.time.sum())} run time')
-
-
-
